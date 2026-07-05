@@ -32,9 +32,10 @@
 			})
 			
 			input.addEventListener("keydown", (e) => {
-				if(e.key = "Backspace"){
+				if(e.key === "Backspace"){
 					if(input.value === "" && index>0){
 						codes[index-1].focus();
+						codes[index-1].value = "";
 					}
 				}
 			})
