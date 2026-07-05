@@ -8,8 +8,38 @@
 
 <body>
 	<!-- the entire body must be written by student -->
+	<h1 id="verification_heading">Verify Your Account</h1>
+	<h3 id="verification_subtext"> Please enter the otp recieved on your email.</h3>
+	<div class="code-container">
+		<input type="text" class="code" maxlength="1">
+		<input type="text" class="code" maxlength="1">
+		<input type="text" class="code" maxlength="1">
+		<input type="text" class="code" maxlength="1">
+		<input type="text" class="code" maxlength="1">
+		<input type="text" class="code" maxlength="1">
+	</div>
     <script type="text/javascript" src="./script.js">
-</script>
+		const codes = document.querySelectorAll(".code");
+		codes[0].focus();
+		
+		codes.forEach((input, index) => {
+			input.addEventListener("input", (e) => {
+				if(input.value.length === 1){
+					if(index<codes.length - 1){
+						codes[index+1].focus();	
+					}
+				}
+			})
+			
+			input.addEventListener("keydown", (e) => {
+				if(e.key = "Backspace"){
+					if(input.value === "" && index>0){
+						codes[index-1].focus();
+					}
+				}
+			})
+	})
+	</script>
 
 </body>
 
