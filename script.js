@@ -17,7 +17,7 @@
 			})
 			
 			input.addEventListener("keyup", (e) => {
-				if(e.key === "Backspace" && input.value === "" && index>0){
+				if(e.key === "Backspace" && index>0){
 					codes[index-1].focus();
 				}
 			})
