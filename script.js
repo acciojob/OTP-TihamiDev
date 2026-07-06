@@ -1,7 +1,9 @@
 //your JS code here. If required.
 		console.log("Hello");
 		const codes = document.querySelectorAll(".code");
-		codes[0].focus();
+		window.onload = () => {
+			codes[0].focus();
+		}
 		
 		codes.forEach((input, index) => {
 			input.addEventListener("input", (e) => {
@@ -16,8 +18,9 @@
 				
 			})
 			
-			input.addEventListener("keyup", (e) => {
+			input.addEventListener("keydown", (e) => {
 				if(e.key === "Backspace" && index>0){
+					e.preventDefault();
 					codes[index-1].focus();
 				}
 			})
