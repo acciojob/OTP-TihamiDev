@@ -5,11 +5,15 @@
 		
 		codes.forEach((input, index) => {
 			input.addEventListener("input", (e) => {
-				if(input.value.length === 1){
-					if(index<codes.length - 1){
-						codes[index+1].focus();	
-					}
+				if(!/^\d$/.test(input.value)){
+					input.value = "";
+					return;
 				}
+				
+				if(index<codes.length - 1){
+					codes[index+1].focus();	
+				}
+				
 			})
 			
 			input.addEventListener("keyup", (e) => {
