@@ -20,7 +20,7 @@
 			
 			input.addEventListener("keydown", (e) => {
 				if(e.key === "Backspace" && index>0){
-					e.preventDefault();
+					// e.preventDefault();
 					codes[index-1].focus();
 				}
 			})
