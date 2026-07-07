@@ -1,9 +1,7 @@
 //your JS code here. If required.
-		
-		const codes = document.querySelectorAll(".code");
-		// window.onload = () => {
-		// 	codes[0].focus();
-		// }
+document.addEventListener("DOMContentLoaded", () => {
+const codes = document.querySelectorAll(".code");
+		codes[0].focus();
 		console.log(codes.length);
 		codes.forEach((input, index) => {
 			input.addEventListener("input", (e) => {
@@ -24,4 +22,6 @@
 					codes[index-1].focus();
 				}
 			})
-		})
+		})	
+});
+		
