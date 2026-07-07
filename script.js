@@ -1,9 +1,9 @@
 //your JS code here. If required.
 		
 		const codes = document.querySelectorAll(".code");
-		window.onload = () => {
-			codes[0].focus();
-		}
+		// window.onload = () => {
+		// 	codes[0].focus();
+		// }
 		console.log(codes.length);
 		codes.forEach((input, index) => {
 			input.addEventListener("input", (e) => {
