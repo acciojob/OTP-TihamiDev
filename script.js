@@ -1,6 +1,6 @@
 function init() {
 	const codes = document.querySelectorAll(".code");
-	if (codes.length === 0) return; // elements not in DOM yet, bail safely
+	if (codes.length === 0) return; 
 
 	codes[0].focus();
 
@@ -28,3 +28,4 @@ if (document.readyState === "loading") {
 } else {
 	init();
 }
+
